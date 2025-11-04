@@ -7,12 +7,12 @@ describe('typeScript test suite', () => {
     expect(helloWorld()).toBe('Hello, World!');
   });
 });*/
+import { describe, expect, it } from '@jest/globals';
 import { getSystemInformation } from "./index";
 
 describe("getSystemInformation()", () => {
   it("devrait renvoyer toutes les clés système attendues", async () => {
     const info = await getSystemInformation();
-
     expect(info).toHaveProperty("cpu");
     expect(info).toHaveProperty("system");
     expect(info).toHaveProperty("mem");
