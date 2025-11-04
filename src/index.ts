@@ -50,7 +50,7 @@ app.get("/api/v1/sysinfo", async (_req, res) => {
     const info = await getSystemInformation();
     res.status(200).json({
   ...info,
-  test:"NewAddedContent",
+  test:"New Content Added",
   }); 
   } catch (e) {
     res.status(500).json({ error: "Internal Server Error" });
