@@ -69,5 +69,3 @@ if (process.env.NODE_ENV !== 'test') {
 // On exporte app pour écrire des tests avec supertest plus tard
 export { app };
 export {getSystemInformation};
-
-
