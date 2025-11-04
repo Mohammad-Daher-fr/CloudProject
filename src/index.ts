@@ -60,9 +60,11 @@ app.use((_req, res) => {
 });
 
 // 7) On démarre le serveur
-app.listen(PORT, () => {
-  console.log(`Server listening on http://localhost:${PORT}/api/v1/sysinfo`);
-});
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(PORT, () => {
+    console.log(`Server listening on http://localhost:${PORT}/api/v1/sysinfo`);
+  });
+}
 
 // On exporte app pour écrire des tests avec supertest plus tard
 export { app };
